@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b8nyapp8lweu0"]
+
+[ext_resource type="Texture2D" uid="uid://dg4ynmsh14vkw" path="res://Assets/Cupido.png" id="1_lg25c"]
+[ext_resource type="Script" uid="uid://dm8ulqmmhmh22" path="res://Escenas/jugador.gd" id="1_pqx3y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pqx3y"]
+radius = 105.47511
+
+[node name="Jugador" type="CharacterBody2D" unique_id=1658415682]
+script = ExtResource("1_pqx3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=356348217]
+shape = SubResource("CircleShape2D_pqx3y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1799028669]
+scale = Vector2(0.23737651, 0.23737651)
+texture = ExtResource("1_lg25c")
