@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cjydr8dbs7vo6"]
 
 [ext_resource type="PackedScene" uid="uid://b8nyapp8lweu0" path="res://Escenas/Jugador.tscn" id="1_gdxqw"]
+[ext_resource type="Script" uid="uid://breulqyxc5qsk" path="res://Escenas/spawn.gd" id="1_hxvt1"]
 [ext_resource type="PackedScene" uid="uid://b4hnks3jhol8a" path="res://Escenas/Enemigo.tscn" id="2_of526"]
 [ext_resource type="PackedScene" uid="uid://n3ah5a6xx6l8" path="res://Escenas/Cristal.tscn" id="3_hxvt1"]
 [ext_resource type="PackedScene" uid="uid://buejfp5b0geyj" path="res://Escenas/Destello.tscn" id="4_gql56"]
@@ -22,6 +23,13 @@ shape = SubResource("RectangleShape2D_of526")
 position = Vector2(1149, 961)
 shape = SubResource("RectangleShape2D_of526")
 
+[node name="Spawn" type="Node2D" parent="." unique_id=1394033939]
+position = Vector2(0, -116)
+script = ExtResource("1_hxvt1")
+
+[node name="Timer" type="Timer" parent="Spawn" unique_id=43249641]
+autostart = true
+
 [node name="Jugador" parent="." unique_id=1658415682 instance=ExtResource("1_gdxqw")]
 position = Vector2(507, 1775)
 
@@ -42,3 +50,5 @@ position = Vector2(588, 517)
 
 [node name="Destello" parent="." unique_id=813177492 instance=ExtResource("4_gql56")]
 position = Vector2(505, 1590)
+
+[connection signal="timeout" from="Spawn/Timer" to="Spawn" method="_on_timer_timeout"]

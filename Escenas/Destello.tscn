@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://buejfp5b0geyj"]
 
+[ext_resource type="Script" uid="uid://bcbjhicssi1cb" path="res://Escenas/destello.gd" id="1_7vu52"]
 [ext_resource type="Texture2D" uid="uid://cpbq1q6jefsau" path="res://Assets/destello.png" id="1_hkvu0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7vu52"]
 radius = 42.0119
 
 [node name="Destello" type="Area2D" unique_id=813177492]
+script = ExtResource("1_7vu52")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=761460310]
 shape = SubResource("CircleShape2D_7vu52")
