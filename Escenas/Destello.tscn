@@ -7,6 +7,8 @@
 radius = 42.0119
 
 [node name="Destello" type="Area2D" unique_id=813177492]
+collision_layer = 2
+collision_mask = 4
 script = ExtResource("1_7vu52")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=761460310]
@@ -15,3 +17,5 @@ shape = SubResource("CircleShape2D_7vu52")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1153037806]
 scale = Vector2(0.42878488, 0.42878488)
 texture = ExtResource("1_hkvu0")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

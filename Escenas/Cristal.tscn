@@ -6,6 +6,7 @@
 radius = 74.64138
 
 [node name="Cristal" type="Area2D" unique_id=1778926079]
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2501232]
 scale = Vector2(1.0080668, 1)

@@ -2,11 +2,15 @@
 
 [ext_resource type="Script" uid="uid://03ig4cfntrcc" path="res://Escenas/enemigo.gd" id="1_nxnwl"]
 [ext_resource type="Texture2D" uid="uid://cm4w7gpm86d4l" path="res://Assets/nube1.png" id="1_rh4lt"]
+[ext_resource type="Script" uid="uid://cfv3q8sjhkahi" path="res://Componentes/Vida.gd" id="3_hbr6x"]
+[ext_resource type="Script" uid="uid://d2vlltvcavjw7" path="res://Componentes/BarraVida.gd" id="4_id87n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nxnwl"]
 radius = 110.88733
 
-[node name="Enemigo" type="Area2D" unique_id=372923768]
+[node name="Enemigo" type="Area2D" unique_id=372923768 groups=["Enemigo"]]
+collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_nxnwl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1377413434]
@@ -15,3 +19,20 @@ shape = SubResource("CircleShape2D_nxnwl")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1756392138]
 scale = Vector2(0.4074949, 0.4074949)
 texture = ExtResource("1_rh4lt")
+
+[node name="Vida" type="Node" parent="." unique_id=740209723]
+script = ExtResource("3_hbr6x")
+metadata/_custom_type_script = "uid://cfv3q8sjhkahi"
+
+[node name="BarraVida" type="ProgressBar" parent="." unique_id=1949244162]
+offset_left = -93.0
+offset_top = 87.0
+offset_right = 95.0
+offset_bottom = 114.0
+value = 100.0
+script = ExtResource("4_id87n")
+metadata/_custom_type_script = "uid://d2vlltvcavjw7"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="daño_recibido" from="Vida" to="." method="_on_vida_daño_recibido"]
+[connection signal="morir" from="Vida" to="." method="_on_vida_morir"]

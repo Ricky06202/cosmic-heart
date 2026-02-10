@@ -14,7 +14,7 @@ config/name="Cosmic Heart"
 run/main_scene="uid://cjydr8dbs7vo6"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/show_image=false
-config/icon="res://icon.svg"
+config/icon="uid://bcage3ykph5ua"
 
 [display]
 
@@ -25,6 +25,14 @@ window/size/window_width_override=540
 window/size/window_height_override=960
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[layer_names]
+
+2d_physics/layer_1="Jugador"
+2d_physics/layer_2="Destellos"
+2d_physics/layer_3="Enemigos"
+2d_physics/layer_4="Cristales"
+2d_physics/layer_5="Paredes"
 
 [physics]
 
