@@ -16,13 +16,17 @@ func _process(delta: float) -> void:
 		queue_free()
 
 func _on_vida_morir() -> void:
-	var soltarCristal = randf()
-	if soltarCristal <= .30:
-		var nuevoCristal : Area2D = cristal.instantiate()
-		nuevoCristal.global_position = global_position
-		get_parent().add_child(nuevoCristal)
-		
+	call_deferred("soltar_recompensa")
+	Globals.enemigoDerrotado.emit()
 	queue_free()
+
+func soltar_recompensa():
+	var soltarCristal = randf()
+	if soltarCristal <= 0.30:
+		var nuevoCristal : Area2D = cristal.instantiate()
+		# Usamos get_parent() con cuidado o el nodo principal de la escena
+		get_parent().add_child(nuevoCristal)
+		nuevoCristal.global_position = global_position
 
 func _on_vida_daño_recibido(cantidad: Variant) -> void:
 	var tween = create_tween()

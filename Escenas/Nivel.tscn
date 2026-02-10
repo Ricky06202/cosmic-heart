@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b8nyapp8lweu0" path="res://Escenas/Jugador.tscn" id="1_gdxqw"]
 [ext_resource type="Script" uid="uid://breulqyxc5qsk" path="res://Escenas/spawn.gd" id="1_hxvt1"]
 [ext_resource type="PackedScene" uid="uid://buejfp5b0geyj" path="res://Escenas/Destello.tscn" id="4_gql56"]
+[ext_resource type="PackedScene" uid="uid://bmju8y8nuwnfp" path="res://Escenas/interfaz.tscn" id="4_of526"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_of526"]
 size = Vector2(136, 1985)
@@ -34,5 +35,7 @@ position = Vector2(507, 1775)
 
 [node name="Destello" parent="." unique_id=813177492 instance=ExtResource("4_gql56")]
 position = Vector2(505, 1590)
+
+[node name="Interfaz" parent="." unique_id=1960851542 instance=ExtResource("4_of526")]
 
 [connection signal="timeout" from="Spawn/Timer" to="Spawn" method="_on_timer_timeout"]
