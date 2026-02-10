@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://n3ah5a6xx6l8"]
 
+[ext_resource type="Script" uid="uid://bcfwvora7a1ch" path="res://Escenas/cristal.gd" id="1_0nb50"]
 [ext_resource type="Texture2D" uid="uid://pi47rwcy2fah" path="res://Assets/Cristal azul.png" id="1_ah2lg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0nb50"]
@@ -7,6 +8,7 @@ radius = 74.64138
 
 [node name="Cristal" type="Area2D" unique_id=1778926079]
 collision_layer = 8
+script = ExtResource("1_0nb50")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2501232]
 scale = Vector2(1.0080668, 1)
@@ -15,3 +17,5 @@ shape = SubResource("CircleShape2D_0nb50")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=873980168]
 scale = Vector2(0.5393046, 0.5393046)
 texture = ExtResource("1_ah2lg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

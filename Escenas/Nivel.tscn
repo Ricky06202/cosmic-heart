@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://b8nyapp8lweu0" path="res://Escenas/Jugador.tscn" id="1_gdxqw"]
 [ext_resource type="Script" uid="uid://breulqyxc5qsk" path="res://Escenas/spawn.gd" id="1_hxvt1"]
-[ext_resource type="PackedScene" uid="uid://n3ah5a6xx6l8" path="res://Escenas/Cristal.tscn" id="3_hxvt1"]
 [ext_resource type="PackedScene" uid="uid://buejfp5b0geyj" path="res://Escenas/Destello.tscn" id="4_gql56"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_of526"]
@@ -32,9 +31,6 @@ autostart = true
 
 [node name="Jugador" parent="." unique_id=1658415682 instance=ExtResource("1_gdxqw")]
 position = Vector2(507, 1775)
-
-[node name="Cristal" parent="." unique_id=1778926079 instance=ExtResource("3_hxvt1")]
-position = Vector2(588, 517)
 
 [node name="Destello" parent="." unique_id=813177492 instance=ExtResource("4_gql56")]
 position = Vector2(505, 1590)

@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/show_image=false
 config/icon="uid://bcage3ykph5ua"
 
+[autoload]
+
+Globals="*uid://b0wv4pfd3j1e4"
+
 [display]
 
 window/size/viewport_width=1080

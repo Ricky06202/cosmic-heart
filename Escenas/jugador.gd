@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 @onready var destello : PackedScene = load("res://Escenas/Destello.tscn")
 @onready var marker_2d: Marker2D = $Marker2D
-@onready var vida: Vida = $Vida
 
 const velocidad = 10.0
 

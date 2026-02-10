@@ -17,5 +17,6 @@ func _process(delta: float) -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Enemigo"):
-		(area.vida as Vida).recibir_daño(1)
+		var vida = area.get_node("Vida") as Vida
+		vida.recibir_daño(1)
 		queue_free()

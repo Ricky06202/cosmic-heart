@@ -1,7 +1,7 @@
 extends Area2D
 
 var velocidadCaida = 200
-@onready var vida: Vida = $Vida
+@onready var cristal : PackedScene = load("res://Escenas/Cristal.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,6 +16,12 @@ func _process(delta: float) -> void:
 		queue_free()
 
 func _on_vida_morir() -> void:
+	var soltarCristal = randf()
+	if soltarCristal <= .30:
+		var nuevoCristal : Area2D = cristal.instantiate()
+		nuevoCristal.global_position = global_position
+		get_parent().add_child(nuevoCristal)
+		
 	queue_free()
 
 func _on_vida_daño_recibido(cantidad: Variant) -> void:
@@ -25,5 +31,6 @@ func _on_vida_daño_recibido(cantidad: Variant) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	(body.vida as Vida).recibir_daño(1)
+	var vida = body.get_node("Vida") as Vida
+	vida.recibir_daño(1)
 	queue_free()
