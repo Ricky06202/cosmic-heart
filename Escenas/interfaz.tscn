@@ -3,8 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://d3q43b55lyvr2" path="res://Assets/Cristal morado.png" id="1_ucux2"]
 [ext_resource type="Script" uid="uid://ci0q6rpxhylkh" path="res://Escenas/interfaz.gd" id="1_v77kn"]
 [ext_resource type="Texture2D" uid="uid://cm4w7gpm86d4l" path="res://Assets/nube1.png" id="2_ucux2"]
+[ext_resource type="Texture2D" uid="uid://tq07pj8c3bn8" path="res://Assets/Memorias/Amigos2.png" id="4_vufxf"]
 
 [node name="Interfaz" type="CanvasLayer" unique_id=1960851542]
+process_mode = 3
 script = ExtResource("1_v77kn")
 
 [node name="Contadores" type="Control" parent="." unique_id=394889714]
@@ -108,9 +110,234 @@ theme_override_font_sizes/font_size = 100
 text = "0"
 
 [node name="Memoria" type="Control" parent="." unique_id=62344459]
+visible = false
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
+[node name="Panel" type="Panel" parent="Memoria" unique_id=62624774]
+self_modulate = Color(1, 0, 1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -402.0
+offset_top = -683.0
+offset_right = 402.0
+offset_bottom = 758.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Memoria/Panel" unique_id=1910759566]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Memoria/Panel/MarginContainer" unique_id=555463070]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Memoria/Panel/MarginContainer/VBoxContainer" unique_id=371066794]
+layout_mode = 2
+texture = ExtResource("4_vufxf")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Titulo" type="Label" parent="Memoria/Panel/MarginContainer/VBoxContainer" unique_id=773218730]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Hola Este es un texto de prueba :D"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Memoria/Panel/MarginContainer/VBoxContainer" unique_id=1968500174]
+layout_mode = 2
+theme_override_constants/margin_top = 30
+
+[node name="Descripcion" type="Label" parent="Memoria/Panel/MarginContainer/VBoxContainer" unique_id=1760944786]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Hola Este es un texto de prueba :D"
+autowrap_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="Memoria/Panel/MarginContainer/VBoxContainer" unique_id=1503541866]
+layout_mode = 2
+theme_override_constants/margin_top = 30
+
+[node name="Button" type="Button" parent="Memoria/Panel/MarginContainer/VBoxContainer" unique_id=469358640]
+modulate = Color(1, 0, 1, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Continuar"
+
+[node name="Ganaste" type="Control" parent="." unique_id=1699968513]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Ganaste" unique_id=1147647862]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -438.0
+offset_top = -677.0
+offset_right = 438.0
+offset_bottom = 931.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Ganaste/Panel" unique_id=1213012963]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Ganaste/Panel/MarginContainer" unique_id=622339007]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Ganaste/Panel/MarginContainer/VBoxContainer" unique_id=1414939804]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "Haz Ganado!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Ganaste/Panel/MarginContainer/VBoxContainer" unique_id=1662387839]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Viva!!! Eres la mejor Yei!!!
+
+La verdad no esperaba que llegases a terminarte el juego jeje y ademas ya viste todas las fotos no me queda nada mas por mostrarte ><
+
+Eres la mejor amiga que he podido tener sabes!, desde que te mudaste para alla solo me puse a pensar que cosas puedo hacer para seguir pasandola bien contigo y solo mira :3 todo un jueguito pa ti
+
+Espero que te hayan gustado este tipo de regalos por que buajaja adivina en un futuro habra mas :3"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Ganaste/Panel/MarginContainer/VBoxContainer" unique_id=1907605445]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Ganaste/Panel/MarginContainer/VBoxContainer" unique_id=350068515]
+modulate = Color(1, 0, 1, 1)
+layout_mode = 2
+alignment = 1
+
+[node name="Volver al Menu" type="Button" parent="Ganaste/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2074044857]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Volver al Menu"
+
+[node name="MarginContainer" type="MarginContainer" parent="Ganaste/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=197247839]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+
+[node name="Perdiste" type="Control" parent="." unique_id=1448178758]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Perdiste" unique_id=1849739153]
+self_modulate = Color(1, 0, 1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -442.0
+offset_top = -417.0
+offset_right = 442.0
+offset_bottom = 417.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Perdiste/Panel" unique_id=349351146]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Perdiste/Panel/MarginContainer" unique_id=988560470]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Perdiste/Panel/MarginContainer/VBoxContainer" unique_id=1843195769]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "Haz Perdido!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Perdiste/Panel/MarginContainer/VBoxContainer" unique_id=2139046916]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Lo siento Yei pero haz perdido
+
+Estaria genial si lo vuelves a intentar ya que este juego no es infinito
+
+Cada vez que vuelvas a empezar veras cosas distintas"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Perdiste/Panel/MarginContainer/VBoxContainer" unique_id=1641129224]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Perdiste/Panel/MarginContainer/VBoxContainer" unique_id=905254254]
+modulate = Color(1, 0, 1, 1)
+layout_mode = 2
+alignment = 1
+
+[node name="Volver al Menu" type="Button" parent="Perdiste/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=533971688]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Volver al Menu"
+
+[node name="MarginContainer" type="MarginContainer" parent="Perdiste/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=613328064]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+
+[node name="Reintentar" type="Button" parent="Perdiste/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2048245843]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Reintentar"
+
+[connection signal="juegoCompletado" from="." to="." method="_on_juego_completado"]
 [connection signal="memoriaRecuperada" from="." to="." method="_on_memoria_recuperada"]
+[connection signal="pressed" from="Memoria/Panel/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Ganaste/Panel/MarginContainer/VBoxContainer/HBoxContainer/Volver al Menu" to="." method="_on_volver_al_menu_pressed"]
+[connection signal="pressed" from="Perdiste/Panel/MarginContainer/VBoxContainer/HBoxContainer/Volver al Menu" to="." method="_on_volver_al_menu_pressed"]
+[connection signal="pressed" from="Perdiste/Panel/MarginContainer/VBoxContainer/HBoxContainer/Reintentar" to="." method="_on_reintentar_pressed"]

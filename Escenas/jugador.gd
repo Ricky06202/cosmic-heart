@@ -42,6 +42,7 @@ func _on_timer_timeout() -> void:
 
 
 func _on_vida_morir() -> void:
+	Globals.perdiste.emit()
 	queue_free()
 
 
