@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://csdhpkwf5b76k"]
+
+[ext_resource type="Texture2D" uid="uid://4yvyetpph5qg" path="res://Assets/Inicio.png" id="1_ft1ng"]
+[ext_resource type="Theme" uid="uid://bumpodkdcvko3" path="res://Escenas/tema.tres" id="1_qncgo"]
+[ext_resource type="Script" uid="uid://dupsofaq1lm3o" path="res://Escenas/menu_principal.gd" id="2_qncgo"]
+
+[node name="Menu Principal" type="Control" unique_id=144375933]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_qncgo")
+script = ExtResource("2_qncgo")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1850197661]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ft1ng")
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=806278081]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -484.0
+offset_top = 144.0
+offset_right = 484.0
+offset_bottom = 349.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 150
+text = "Cosmic Heart"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect" unique_id=821304321]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -344.0
+offset_top = -473.0
+offset_right = 344.0
+offset_bottom = -127.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Jugar" type="Button" parent="TextureRect/VBoxContainer" unique_id=1749161149]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+text = "Jugar"
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/VBoxContainer" unique_id=1691934970]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="Salir" type="Button" parent="TextureRect/VBoxContainer" unique_id=1473608796]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+text = "Salir"
+
+[connection signal="pressed" from="TextureRect/VBoxContainer/Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/Salir" to="." method="_on_salir_pressed"]

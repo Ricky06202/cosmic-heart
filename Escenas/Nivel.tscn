@@ -17,6 +17,7 @@ repeat_size = Vector2(0, 1920)
 autoscroll = Vector2(0, 100)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=740386533]
+modulate = Color(1, 0.6392157, 1, 0.84313726)
 position = Vector2(-128, 0)
 scale = Vector2(1.2509766, 1.2509766)
 texture = ExtResource("1_gql56")

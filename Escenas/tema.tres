@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://bumpodkdcvko3"]
+
+[ext_resource type="FontFile" uid="uid://cr6b5p1dhiljs" path="res://Assets/The Magic Castle.ttf" id="1_go4ih"]
+
+[resource]
+default_font = ExtResource("1_go4ih")

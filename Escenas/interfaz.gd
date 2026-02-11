@@ -19,6 +19,7 @@ func _ready() -> void:
 	cristalesBar.max_value = 10
 	cristalesBar.value = 0
 	Globals.perdiste.connect(_on_perdiste)
+	#memoriaAleatoria()
 
 func aumentarCristales():
 	cristales.text = str(int(cristales.text) + 1)
@@ -117,7 +118,8 @@ func _on_reintentar_pressed() -> void:
 	get_tree().paused = false
 	get_tree().reload_current_scene()
 
+@onready var menu = load("res://Escenas/menu_principal.tscn")
 
 func _on_volver_al_menu_pressed() -> void:
 	get_tree().paused = false
-	get_tree().quit()
+	get_tree().change_scene_to_packed(menu)

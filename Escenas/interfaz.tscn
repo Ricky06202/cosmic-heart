@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://d3q43b55lyvr2" path="res://Assets/Cristal morado.png" id="1_ucux2"]
 [ext_resource type="Script" uid="uid://ci0q6rpxhylkh" path="res://Escenas/interfaz.gd" id="1_v77kn"]
 [ext_resource type="Texture2D" uid="uid://cm4w7gpm86d4l" path="res://Assets/nube1.png" id="2_ucux2"]
+[ext_resource type="Theme" uid="uid://bumpodkdcvko3" path="res://Escenas/tema.tres" id="2_war0f"]
 [ext_resource type="Texture2D" uid="uid://tq07pj8c3bn8" path="res://Assets/Memorias/Amigos2.png" id="4_vufxf"]
 
 [node name="Interfaz" type="CanvasLayer" unique_id=1960851542]
@@ -17,6 +18,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+theme = ExtResource("2_war0f")
 
 [node name="Cristales" type="Panel" parent="Contadores" unique_id=2006595948]
 self_modulate = Color(1, 0, 1, 1)
@@ -73,7 +75,7 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -368.0
+offset_left = -426.0
 offset_top = 23.0
 offset_right = -24.0
 offset_bottom = 176.0
@@ -117,6 +119,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_war0f")
 
 [node name="Panel" type="Panel" parent="Memoria" unique_id=62624774]
 self_modulate = Color(1, 0, 1, 1)
@@ -129,7 +132,7 @@ anchor_bottom = 0.5
 offset_left = -402.0
 offset_top = -683.0
 offset_right = 402.0
-offset_bottom = 758.0
+offset_bottom = 554.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -189,6 +192,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_war0f")
 
 [node name="Panel" type="Panel" parent="Ganaste" unique_id=1147647862]
 layout_mode = 1
@@ -198,9 +202,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -438.0
-offset_top = -677.0
+offset_top = -534.0
 offset_right = 438.0
-offset_bottom = 931.0
+offset_bottom = 533.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -264,6 +268,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_war0f")
 
 [node name="Panel" type="Panel" parent="Perdiste" unique_id=1849739153]
 self_modulate = Color(1, 0, 1, 1)
@@ -274,9 +279,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -442.0
-offset_top = -417.0
+offset_top = -270.0
 offset_right = 442.0
-offset_bottom = 417.0
+offset_bottom = 310.0
 grow_horizontal = 2
 grow_vertical = 2
 
