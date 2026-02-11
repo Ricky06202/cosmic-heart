@@ -1,14 +1,26 @@
 [gd_scene format=3 uid="uid://cjydr8dbs7vo6"]
 
 [ext_resource type="PackedScene" uid="uid://b8nyapp8lweu0" path="res://Escenas/Jugador.tscn" id="1_gdxqw"]
+[ext_resource type="Texture2D" uid="uid://bv7cxmwf0u5yv" path="res://Assets/Fondo (2).png" id="1_gql56"]
 [ext_resource type="Script" uid="uid://breulqyxc5qsk" path="res://Escenas/spawn.gd" id="1_hxvt1"]
 [ext_resource type="PackedScene" uid="uid://buejfp5b0geyj" path="res://Escenas/Destello.tscn" id="4_gql56"]
 [ext_resource type="PackedScene" uid="uid://bmju8y8nuwnfp" path="res://Escenas/interfaz.tscn" id="4_of526"]
+[ext_resource type="AudioStream" uid="uid://c2ymaen0ugjuu" path="res://Assets/Musica.mp3" id="6_gql56"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_of526"]
 size = Vector2(136, 1985)
 
 [node name="Nivel" type="Node2D" unique_id=1406354767]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1897648416]
+repeat_size = Vector2(0, 1920)
+autoscroll = Vector2(0, 100)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=740386533]
+position = Vector2(-128, 0)
+scale = Vector2(1.2509766, 1.2509766)
+texture = ExtResource("1_gql56")
+centered = false
 
 [node name="Paredes" type="Node2D" parent="." unique_id=936931084]
 
@@ -37,5 +49,10 @@ position = Vector2(507, 1775)
 position = Vector2(505, 1590)
 
 [node name="Interfaz" parent="." unique_id=1960851542 instance=ExtResource("4_of526")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1529969749]
+process_mode = 3
+stream = ExtResource("6_gql56")
+autoplay = true
 
 [connection signal="timeout" from="Spawn/Timer" to="Spawn" method="_on_timer_timeout"]
