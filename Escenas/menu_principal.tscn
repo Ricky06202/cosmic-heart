@@ -23,7 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ft1ng")
 
-[node name="Label" type="Label" parent="TextureRect" unique_id=806278081]
+[node name="Titulo" type="Label" parent="TextureRect" unique_id=806278081]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -39,6 +39,41 @@ theme_override_font_sizes/font_size = 150
 text = "Cosmic Heart"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Por Ricardo Sanjur" type="Label" parent="TextureRect" unique_id=1389126626]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -484.0
+offset_top = 291.0
+offset_right = 484.0
+offset_bottom = 496.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 100
+text = "Por Ricardo Sanjur"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Para mi mejor amiga" type="Label" parent="TextureRect" unique_id=1258208836]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -484.0
+offset_top = 478.0
+offset_right = 484.0
+offset_bottom = 683.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 100
+text = "Para Mi Mejor Amiga Yeisury"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TextureRect" unique_id=821304321]
 layout_mode = 1
