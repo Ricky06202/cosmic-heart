@@ -2,10 +2,20 @@ extends Area2D
 
 var velocidadCaida = 200
 @onready var cristal : PackedScene = load("res://Escenas/Cristal.tscn")
+@onready var sprite_2d: Sprite2D = $Sprite2D
+
+var sprites = [
+	preload("res://Assets/nube1.png"),
+	preload("res://Assets/nube2.png"),
+]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	var sprite = randi() % sprites.size()
+	sprite_2d.texture = sprites.get(sprite)
+	
+	var voltear = randi() % 2
+	sprite_2d.flip_h = voltear
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
