@@ -55,5 +55,6 @@ position = Vector2(505, 1590)
 process_mode = 3
 stream = ExtResource("6_gql56")
 autoplay = true
+parameters/looping = true
 
 [connection signal="timeout" from="Spawn/Timer" to="Spawn" method="_on_timer_timeout"]
